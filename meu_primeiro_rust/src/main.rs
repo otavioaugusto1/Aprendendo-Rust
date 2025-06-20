@@ -32,4 +32,23 @@ fn main() {
     let my_text: &str = "Hello";  // string 
     // */
 
+
+    let a = 5;
+    let b = 10;
+
+    println!("5 == 10: {}", a == b);
+    println!("5 != 10: {}", a != b);
+    println!("5 < 10: {}", a < b);
+    println!("5 >= 10: {}", a >= b);
+    println!("5 * 10: {}", a * b);
+    println!("5 + 10: {}", a + b);
+
+    let eh_usuario = true;
+    let eh_admin = false;
+    println!("Possui acesso privilegiado? {}", eh_usuario && eh_admin);
+    println!("Possui acesso privilegiado? {}", eh_usuario && !eh_admin);
+
+
+
+
 }
