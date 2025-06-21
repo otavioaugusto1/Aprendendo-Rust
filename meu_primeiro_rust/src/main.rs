@@ -141,4 +141,40 @@ let result = loop {
   contador += 1;
 }
 */
+
+// while
+/*
+
+let mut cont1 = 1;
+
+while cont1 <= 5{
+  println!("Hello, Otávio. Contador no valor {}!", cont1);
+  //posso utilizar break para sair de um loop while, por mais que nesse exemplo ele não entre com o valor 6
+  if cont1 == 6 {
+    break;
+  }
+  cont1 += 1;
+}
+*/
+  println!("While loop ");
+  let mut cont1 = 1;
+
+  while cont1 <= 2{
+    println!("Hello, Otávio. Contador no valor {}!", cont1);
+    //posso utilizar break para sair de um loop while, por mais que nesse exemplo ele não entre com o valor 6
+    if cont1 == 6 {
+      break;
+    }
+    cont1 += 1;
+  }
+
+  println!("For loop ");
+  for i in 1..6 {
+    println!("i is: {}", i);
+  }
+
+  println!("For loop com final incluso ");
+  for i in 1..=6 {
+    println!("i is: {}", i);
+  }
 }
