@@ -48,7 +48,97 @@ fn main() {
     println!("Possui acesso privilegiado? {}", eh_usuario && eh_admin);
     println!("Possui acesso privilegiado? {}", eh_usuario && !eh_admin);
 
+    // if/else if/else
+    if 7 > 5 {
+        println!("7 é maior que 5.");
+    }
+
+    let score = 85;
+
+    if score >= 90 {
+        println!("Grade: A");
+    } else if score >= 80 {
+        println!("Grade: B");
+    } else if score >= 70 {
+        println!("Grade: C");
+    } else {
+        println!("Grade: F");
+    }
+    
+    let tempo = 20;
+    let saudacoes = if tempo < 18{
+        "bom dia"
+    } else {
+        "boa tarde"
+    };
+    println!("{}", saudacoes);
+
+    //match
+      let day = 4;
+
+  match day {
+    1 => println!("Monday"),
+    2 => println!("Tuesday"),
+    3 => println!("Wednesday"),
+    4 => println!("Thursday"),
+    5 => println!("Friday"),
+    6 => println!("Saturday"),
+    7 => println!("Sunday"),
+    _ => println!("Invalid day."),
+  }
+
+  // multiplos matchs
+
+  let dia = 3;
+
+  match dia {
+    1 | 2 | 3 | 4 | 5 => println!("Dia da semana"),
+    6 | 7 => println!("Final de semana"),
+    _ => println!("número inválido"),
+  }
+    
+    // match com retorno 
+    /*   
+    let day = 4;
+
+    let resultado: $str = match day {
+        1 => "Monday",
+        2 => "Tuesday",
+        3 => "Wednesday",
+        4 => "Thursday",
+        5 => "Friday",
+        6 => "Saturday",
+        7 => "Sunday",
+        _ => "Invalid day.",
+    }
+*/
 
 
+let mut contador = 1;
 
+loop {
+  println!("Hello World!");
+
+  if contador == 3 {
+    break;
+  }
+
+  contador += 1;
+}
+
+// loop com retorno 
+/*
+
+let mut contador = 1;
+
+let result = loop {
+  println!("Hello World!");
+
+  if contador == 3 {
+    break count;
+  }
+
+  contador += 1;
+}
+*/
 }
