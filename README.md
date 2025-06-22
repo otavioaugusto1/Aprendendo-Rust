@@ -264,3 +264,81 @@ for i in 1..=6 {
 
 ### Funções em Rust
 
+Funções são definidas da seguinte maneira:
+
+```
+  // Funções
+  fn soma(v1: i32, v2: i32) -> i32{
+    return v1 + v2;
+  }
+  let sum: i32 = soma(1,2);
+  println!("Soma é: {}", sum);
+```
+
+Nota-se que para declarar que a função possui retorno, adicionamos o "->" e falamos o tipo de retorn. 
+
+### Escopo de variáveis
+
+Variáveis ficam disponíveis dentro do seu escopo declarativo. Abaixo mostrarei um exemplo:
+
+```
+fn myFunction() {
+  let message = "Hello!";
+  println!("{}", message);  // Aqui essa variável message está disponível
+}
+
+myFunction();
+println!("{}", message); // Error - aqui ela não está disponível, pois está fora do escopo.
+```
+
+### Diferenças entre Strings
+
+``` 
+let saudacoes: &str = "Hello";
+``` 
+
+*Tipo: &str (string slice)
+*Descrição: Isso é uma referência imutável a uma sequência de caracteres embutida diretamente no binário (literal de string).
+*Vantagem: Muito leve e rápida. Ideal quando não precisa modificar a string.
+*Limitada: Você não pode modificar ou fazer operações que alterem o conteúdo.
+
+``` 
+let text1 = "Hello World".to_string();
+```
+
+*Tipo: String
+*Descrição: Aqui você está pegando um &str (o literal "Hello World") e convertendo para uma String.
+*Vantagem: Agora você tem propriedade sobre a string e pode modificá-la (adicionar, remover, etc.).
+
+```
+let text2 = String::from("Hello World");
+```
+
+*Tipo: String
+*Descrição: Funcionalmente igual ao .to_string(), também converte um &str em uma String.
+
+Concatenando strings:
+
+```
+let mut text2 = String::from("Hello");
+text2.push_str(" world);
+println!("{}, text2");
+```
+
+ Outra forma de concatenação:
+
+```
+let s1 = String::from("Hello");
+let s2 = String::from("World!");
+let s3 = String::from("What a beautiful day!");
+let result = format!("{} {} {}", s1, s2, s3);
+println!("{}", result);
+```
+
+Tamanho da String com .len()
+```
+println!("Tamanho do nome com .len()");
+let tamanho_do_nome = String::from("John");
+println!("Tamanho: {}", tamanho_do_nome.len()); // 4
+```
+

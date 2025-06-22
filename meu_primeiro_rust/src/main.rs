@@ -177,4 +177,39 @@ while cont1 <= 5{
   for i in 1..=6 {
     println!("i is: {}", i);
   }
+
+  // Funções
+  fn soma(v1: i32, v2: i32) -> i32{
+    return v1 + v2;
+  }
+  let sum: i32 = soma(1,2);
+  println!("Soma é: {}", sum);
+
+  let str1: &str = "oi, &str";
+  let mut str2 = "oi, to_string".to_string();
+  let mut str3 = String::from("oi,String::From");
+
+  println!("{}",str1);
+  println!("{}",str2);
+  println!("{}",str3);
+
+  //Concatenando
+  println!("Concatenando");
+  let mut str4 = String::from("Hello");
+  println!("{}", str4);
+  str4.push_str(" world");
+  println!("{}", str4);
+
+  let s1 = String::from("Hello");
+  let s2 = String::from("World!");
+  let s3 = String::from("What a beautiful day!");
+  let result = format!("{} {} {}", s1, s2, s3);
+  println!("{}", result);
+
+  // Tamanho do nome
+  println!("Tamanho do nome com .len()");
+  let tamanho_do_nome = String::from("John");
+  println!("Tamanho: {}", tamanho_do_nome.len()); // 4
+
+  
 }
