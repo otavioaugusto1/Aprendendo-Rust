@@ -342,3 +342,35 @@ let tamanho_do_nome = String::from("John");
 println!("Tamanho: {}", tamanho_do_nome.len()); // 4
 ```
 
+### Ownerships
+
+Em Rust, tipos complexos como Strings, ao passar a atribuição de uma variável para a outra, a antiga é excluída. O contrário ocorre para tipos básicos (int, caracteres, bools), é apenas feito uma cópia.
+
+```
+let a = String::from("Hello");
+let b = a;
+
+// println!("{}", a); Error: a não existe mais
+println!("{}", b); // Ok: b funciona, pois "b" agora é dono de "a"
+```
+
+Com tipos simples:
+
+
+```
+let a: i32 = 5 
+let b = a;
+
+ println!("{}", a); // funciona, 5
+println!("{}", b); // funciona, 5 também e é uma cópia de "a"
+```
+
+Se eu quiser que tipos complexos apenas faça uma cópia, posso usar o método clone:
+
+```
+let a = String::from("Hello");
+let b = a.clone(); // Now both have the same value
+
+println!("a = {}", a);  // Works
+println!("b = {}", b);  // Works
+```
