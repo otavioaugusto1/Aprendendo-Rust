@@ -1,3 +1,4 @@
+use std::collections::HashMap;
 fn main() {
     println!("Hello, world!");
     println!("Teste 2!");
@@ -212,4 +213,30 @@ while cont1 <= 5{
   println!("Tamanho: {}", tamanho_do_nome.len()); // 4
 
   
+  //Arrays
+  println!("Arrays");
+  let arr = ["banana", "laranja", "pera"];
+  println!("{:?}", arr);
+  
+  //Vetors
+  println!("Vectors");
+  let mut vector = vec!["banana", "laranja", "pera"];
+  println!("{:?}", vector);
+  vector.push("melancia");
+  println!("{:?}", vector);
+
+  //Tuplas
+  println!("Tuplas");
+  let pessoa_tuplas = ("John", 30, true);
+  println!("Name: {}", pessoa_tuplas.0);
+  println!("Age: {}", pessoa_tuplas.1);
+  println!("Is active: {}", pessoa_tuplas.2);
+
+  //HashMaps
+  println!("HashMaps");
+  let mut CapitalCidades = HashMap::new();
+  CapitalCidades.insert("França", "Paris");
+  CapitalCidades.insert("Brasil", "Brasilia");
+  println!("{}", CapitalCidades["Brasil"]);
+
 }

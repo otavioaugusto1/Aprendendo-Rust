@@ -374,3 +374,33 @@ let b = a.clone(); // Now both have the same value
 println!("a = {}", a);  // Works
 println!("b = {}", b);  // Works
 ```
+
+### Arrays, Vectors, Tuplas e HashMaps
+
+Arrays são listas de mesmo tipo e que não podem mudar de tamanho:
+
+```
+let fruits = ["apple", "banana", "orange"];
+println!("Last fruit: {}", fruits[2]);
+```
+
+Vectors são listas(arrays) que podem mudar de tamanho (tanto crescer quanto diminuir)
+
+```
+let mut vector = vec!["banana", "laranja", "pera"];
+println!("{}", vector);
+vector.push("melancia");
+println!("{}", vector);
+```
+
+Tuplas são arrays que podem ter tipos de diferentes valores
+
+```
+  let pessoa_tuplas = ("John", 30, true);
+  println!("Name: {}", pessoa_tuplas.0);
+  println!("Age: {}", pessoa_tuplas.1);
+  println!("Is active: {}", pessoa_tuplas.2);
+```
+
+HashMaps
+
