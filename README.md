@@ -404,3 +404,39 @@ Tuplas são arrays que podem ter tipos de diferentes valores
 
 HashMaps
 
+### Structs
+
+Structs funcionam como em C ou C++.
+Como em C++, e ao contrário de C, nenhum typedef é necessário para definir um tipo.
+Ao contrário do C++, não há herança entre structs.
+
+```
+struct Person {
+    name: String,
+    age: u8,
+}
+
+fn describe(person: &Person) {
+    println!("{} tem {} anos.", person.name, person.age);
+}
+
+fn main() {
+    let mut peter = Person { name: String::from("Peter"), age: 27 };
+    describe(&peter);
+
+    peter.age = 28;
+    describe(&peter);
+
+    let name = String::from("Avery");
+    let age = 39;
+    let avery = Person { name, age };
+    describe(&avery);
+
+    let jackie = Person { name: String::from("Jackie"), ..avery };
+    describe(&jackie);
+}
+```
+
+### Enums
+Em Rust, enum (abreviação de enumeration) é um tipo de dado que permite definir um conjunto de variantes possíveis para um valor — muito parecido com os enums em outras linguagens, mas mais poderoso.
+
